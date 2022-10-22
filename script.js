@@ -25,10 +25,11 @@ function start(){
         },
         Pause:{
             status:"Paused",
-            message:"Press 'p' to resume the game"
+            message:"Press 'p' to Resume the game"
         },
         Play:{
             status:"Play",
+            message:"Press 'p' to Pause the game"
         }
     }
     
@@ -57,6 +58,12 @@ function start(){
                 ctx.fillText(this.gameStatus.status, canvas.width*0.5, canvas.height*0.5-30);
                 ctx.font = "30px san-serif";
                 ctx.fillText(this.gameStatus.message, canvas.width*0.5, canvas.height*0.5+30);
+                ctx.restore();
+            }
+            else{
+                ctx.save();
+                ctx.textAlign = "right"
+                ctx.fillText(this.gameStatus.message, canvas.width - 20, this.y);
                 ctx.restore();
             }
         }
