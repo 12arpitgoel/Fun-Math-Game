@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input{
+    height: 25px;
+    width: 100vw;
+}
